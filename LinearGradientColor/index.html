@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinearGradient</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      table {
+        padding: 20px;
+        text-align: center;
+      }
+      h1{
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th><h1>LinearGradient</h1></th>
+      </tr>
+      <tr>
+        <td>
+          <input type="color" id="color1" />
+          <input type="color" id="color2" />
+        </td>
+      </tr>
+    </table>
+  </body>
+  <script>
+    let color1 = document.getElementById("color1");
+    let color2 = document.getElementById("color2");
+
+    let body = document.querySelector("body");
+    color1.addEventListener("input", gradientColor);
+    color2.addEventListener("input", gradientColor);
+
+    function gradientColor() {
+      body.style.backgroundImage =
+        "linear-gradient(to right," + color1.value + "," + color2.value + ")";
+    }
+  </script>
+</html>

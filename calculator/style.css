@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #0a0a0a,#11171f);
+    background-size: cover;
+    background-repeat: no-repeat;
+    gap: 200px;
+
+}
+
+h1{
+    font-size: 70px;
+    color: aqua;
+    border-bottom: 2px solid  cyan; 
+    text-shadow: -2px -2px 15px red;  
+    margin-top: 5px;
+}
+h1:hover{
+    transform: scale(1.2);
+}
+
+.calculator{
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 2px 2px 15px 5px #20fef3;
+    animation: 3s forwards ease zoom infinite;
+    animation-delay: 1s;
+}
+input{
+    width: 320px;
+    cursor: pointer;
+    font-size: 40px;
+    text-align: right;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: none;
+    background: transparent;
+    box-shadow: -2px -2px 15px 5px #060000c4;
+    padding: 18px 24px;
+    margin: 10px;
+}
+input::placeholder{
+    color: rgb(255, 255, 255);
+}
+div button{
+   font-size: 20px;
+   font-weight: 600;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border: none;
+    background: transparent;
+    color: white;
+    border-radius: 50%;
+    box-shadow: -6px -6px 15px rgb(95, 210, 245);
+    cursor: pointer;
+}
+.equalBtn{
+    background-color: rgb(220, 129, 16);
+}
+.operator{
+    color: rgb(8, 232, 38);
+}
+#html{
+    color: red;
+    margin-right: 20px;
+    
+}
+#css{
+    color: rgb(0, 76, 255);
+    margin-right: 20px;
+}
+.icons div{
+    color: rgb(255, 253, 127);
+    font-weight: 600;
+    font-size: 30px;
+    margin: 40px 0px; 
+}
+.icons div:hover{
+    color: rgb(223, 135, 163);
+    font-weight: 600;
+    transform: scale(1.2);
+    
+}
+#js{
+    color: rgb(94, 255, 0);
+    margin-right: 20px;
+ 
+}
+@keyframes zoom {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+

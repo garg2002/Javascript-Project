@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Counter</title>
+</head>
+<body>
+    <div class="main">
+        <h1>Counter App</h1>
+        <button id="dec">Decrement By 1</button>
+        <span id="displayValue">1</span>
+        <button id="inc">Increment By 1</button>
+        <br>
+        <br>
+        <button id="reset">Reset Value</button>
+    </div>
+</body>
+<script>
+const Result = document.getElementById('displayValue');
+const Increment = document.getElementById('inc');
+const Decrement = document.getElementById('dec');
+const Reset = document.getElementById('reset');
+
+Increment.addEventListener('click', () => {
+    const val = Number(Result.innerText);
+
+    if(val>=10){
+        alert("10+ values are not allowed");
+    }
+    else{
+        Result.innerText = val+1;
+    }
+});
+
+Decrement.addEventListener("click", () =>{
+    const val = Number(Result.innerText);
+    if(val>0){
+        Result.innerText = val-1;
+    }
+    else{
+        alert("Negative values are not allowed");
+    }
+})
+
+Reset.addEventListener('click', () =>{
+    Result.innerText= 0;
+})
+
+</script>
+</html>
